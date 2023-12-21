@@ -1,2 +1,2 @@
 # TCities
-Realizare personala
+Realizare personala nu conform indicatiilor mentorului.
