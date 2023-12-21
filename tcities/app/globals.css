@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.form {
+  max-width: 300px;
+  min-width: 100px;
+  width: 18vw;
+}
+
+input, textarea {
+  max-width: 300px ;
+  min-height: 2em;
+  margin-top: 3px;
+  margin-left: 2px;
+  background-color: #0f2e38;
+  border: 1px solid #20677c;
+  color: #ffffff ;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 100px;
+  margin: 10px;
+  height: 2em;
+  background-color: #0f2e38;
+  border: 1px solid #20677c;
+  color: #ffffff ;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 10vw;
+  margin: 0 auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  max-width: 200px;
+  min-width: 100px;
+}
+
+input[type="submit"]:hover {
+  background-color: #4CAF50;
+}
+
+button:hover {
+  background-color: #4CAF50;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+td {
+  width: 150px;
+}
+
+.xtable {
+  margin: 20px;
+}
+.poza {
+  border: 1px solid white ;
+  padding: 2px ;
+  margin: 5px;
+}
+
+.inline {
+  width: unset;
+  margin: 0 2px 5px 0;
+  vertical-align: middle;
+}
+
+.comm {
+  border: 1px solid white ;
+  padding: 2px ;
+  margin: 20px;
+}
+.nota {
+  margin-top: 5px;
+}
+
+#carusel{
+	margin: auto;
+  border: 1px solid black;
+	width: 100%;
+  height: 274px;
+	background-image: url(/bucharest.jpg) ;
+  animation: mymove 10s infinite ;
+  }
+
+@keyframes mymove {
+  20% {transform: rotateX(90deg)};
+  60% {background-image: url(/bucharest.jpg)};
+  50% {transform: rotateX(-90deg)};
+	50% {background-image: url(/belgrade.jpg)} ;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex ;
+  background: black ;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1s linear infinite ; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite ; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite ; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+  0%   { 
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin {
+  0%   { 
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
