@@ -5,8 +5,6 @@ import CityFoto from "@/components/CityFoto" ;
 import CityMeteo from "@/components/CityMeteo" ;
 import CityGeo from   "@/components/CityGeo" ;
 import Navbar from "@/components/Navbar";
-import Link from 'next/link' ;
-
 import { useRouter } from "next/router";
 
 function Header({ title }) {

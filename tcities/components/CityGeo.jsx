@@ -6,7 +6,7 @@ export default function CityGeo(idCity) {
     const [data, setData] = useState("");
 
     useEffect( () => {
-        fetch('https://geocoding-api.open-meteo.com/v1/get?id='+idCity)
+        fetch(`https://geocoding-api.open-meteo.com/v1/get?id=${idCity}`)
             .then(res => res.json() )
             .then(data => setData({
                 id: data.id,

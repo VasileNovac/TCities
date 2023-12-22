@@ -1,5 +1,5 @@
 
-import React, { Component, useState, useEffect } from 'react' ;
+import React from 'react' ;
 import '/app/globals.css' ;
 import Navbar from '@/components/Navbar'
 import Link from 'next/link' ;
@@ -42,14 +42,14 @@ class MySearch extends React.Component {
       submit: this.state.input
     })
 
-    await fetch('https://api.teleport.org/api/urban_areas/slug:'+this.state.input.trim().toLowerCase()+'/images/')
+    await fetch(`https://api.teleport.org/api/urban_areas/slug:${this.state.input.trim().toLowerCase()}/images/`)
       .then( res => res.json() )
       .then( data => this.setState({
         sfoto: data.photos[0].image.web
       }))
       .catch(error => console.error('Error fetching data CityFoto: ', error));
 
-    await fetch('https://geocoding-api.open-meteo.com/v1/search?name='+this.state.input.trim()+'&count=10&language=en&format=json')
+    await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${this.state.input.trim()}&count=10&language=en&format=json`)
       .then(res => res.json())
       .then(data => 
         this.setState({

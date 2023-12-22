@@ -12,7 +12,7 @@ function Header({ title }) {
 }
 
 export default function EditCityForm( { id, city } ) {
-
+/*
     const [idx, setIdx] = useState(city.cities.idx);
     const [nume, setNume] = useState(city.cities.nume);
     const [lat, setLat] = useState(city.cities.lat);
@@ -20,6 +20,7 @@ export default function EditCityForm( { id, city } ) {
     const [foto, setFoto] = useState(city.cities.foto);
     const [nota, setNota] = useState(city.cities.nota);
     const [comm, setComm] = useState(city.cities.comm);
+*/
     const [newIdx, setNewIdx] = useState(city.cities.idx);
     const [newNume, setNewNume] = useState(city.cities.nume);
     const [newLat, setNewLat] = useState(city.cities.lat);
@@ -74,6 +75,7 @@ export default function EditCityForm( { id, city } ) {
             if (res.ok) {
                 alert ("City Deleted from Favorit");
                 router.push("/");
+                router.refresh();
             }
             else {
                 alert ("Failed to delete City from Favorit");

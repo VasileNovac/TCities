@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react' ;
+import React from 'react' ;
 import '/app/globals.css' ;
 import Image from 'next/image'
 import Navbar from "@/components/Navbar" ;

@@ -6,9 +6,8 @@ const getCityById = async( id ) => {
             cache: "no-store",
         });
         if(!res.ok) {
-            throw new Error("Failed to fetch topic") ;
+            throw new Error("Failed to fetch City") ;
         }
-
         return res.json();
     } catch (error) {
         console.log(error);

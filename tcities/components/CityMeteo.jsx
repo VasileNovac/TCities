@@ -6,7 +6,7 @@ export default function CityMeteo(latCity, longCity) {
   const [data, setData] = useState("");
     
   useEffect( () => {
-    fetch('https://api.open-meteo.com/v1/forecast?latitude='+latCity+'&longitude='+longCity+'&current=temperature_2m,relative_humidity_2m,precipitation,surface_pressure,wind_speed_10m&forecast_days=1')
+    fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latCity}&longitude=${longCity}&current=temperature_2m,relative_humidity_2m,precipitation,surface_pressure,wind_speed_10m&forecast_days=1`)
       .then( res => res.json() )
       .then( data => setData({
         dataOra: data.current.time,
